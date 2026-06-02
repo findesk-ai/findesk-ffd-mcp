@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "ffd": {
+      "command": "python3",
+      "args": ["~/.ffd/ffd_mcp_server.py"],
+      "env": {
+        "FFD_API_BASE": "https://ffd.findesk.cn/api",
+        "FFD_API_KEY": "replace-with-your-own-findesk-api-key"
+      }
+    }
+  }
+}
