@@ -1,0 +1,27 @@
+name: smoke
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate release metadata
+        run: |
+          python -m json.tool latest.json >/dev/null
+          python - <<'PY'
+          import json
+          data = json.load(open("latest.json"))
+          assert data.get("version"), "missing version"
+          assert data.get("server_url", "").startswith("https://ffd.findesk.cn/"), "unexpected server_url"
+          print("latest", data["version"])
+          PY
+      - name: Check installer syntax
+        run: |
+          bash -n scripts/install.sh
