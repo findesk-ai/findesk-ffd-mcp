@@ -1,10 +1,28 @@
-# FFD MCP · Chinese Financial Research MCP Server
+# FFD MCP · Finance MCP Server for Chinese Financial Research
 
 FFD MCP connects local AI agents to Findesk financial research capabilities: A-share data, public funds, money flow, macro data, global financial news, domestic and overseas research reports, and smart routing for Chinese financial questions.
 
 It is designed for agents that should **ask in natural language, choose the right financial tool automatically, and explain failures in human language**.
 
 Current public MCP Server version: **0.6.5**
+
+![FFD MCP finance MCP server social preview](./assets/ffd-mcp-social-card.png)
+
+## Search Keywords
+
+If you are looking for a finance MCP server, financial data MCP, stock market MCP, Chinese finance MCP, A-share MCP, China stock MCP, fund MCP, macro data MCP, global financial news MCP, or research report MCP, FFD MCP is built for that workflow.
+
+Chinese search terms: 金融 MCP, 股票 MCP, A股 MCP, 基金 MCP, 研报 MCP, 财经新闻 MCP, 全球新闻 MCP, 资金流 MCP, 宏观数据 MCP, 投研 MCP, 中文金融 MCP.
+
+Agent search intent that FFD MCP is meant to satisfy:
+
+- connect an AI agent to Chinese financial data
+- query A-share stocks, sectors, concepts, funds, and macro indicators
+- search global financial news and domestic or overseas research reports
+- combine money flow, news sentiment, and research clues
+- install a local MCP server for Claude, Cursor, ChatGPT, Codex, or other MCP-compatible agents
+
+For crawler-friendly context, see [llms.txt](./llms.txt) and [docs/github-listing.md](./docs/github-listing.md).
 
 ## Why FFD MCP
 
@@ -13,6 +31,16 @@ Current public MCP Server version: **0.6.5**
 - **Smart routing, not tool sprawl**: FFD is not trying to expose 200 scattered tools. It focuses on stable high-value tools, route planning, fallback chains, and reusable research assets.
 - **Fund and sector workflows**: search funds, inspect fund profiles/performance/holdings, query sector constituents, money flow, industry signals, and index-component prechecks.
 - **Agent-friendly failure handling**: missing code, wrong field, expired trial, quota limit, or permission issue should return a clear next step instead of raw backend errors.
+
+## What Makes It Different
+
+Many finance MCP projects start from a single public API, ticker quotes, or broad generic datasets. FFD MCP focuses on Chinese financial research workflows:
+
+- A-share, fund, sector, concept, macro, and money-flow questions in Chinese
+- global financial news plus domestic and overseas research-report discovery
+- route planning that identifies whether the user is asking for a code, indicator, sector, index, fund, macro series, news item, or report
+- a stable high-value tool surface instead of hundreds of fragmented tools
+- quota, trial, and permission messages that tell the user what to do next
 
 ## Trial
 
